@@ -10220,7 +10220,7 @@ header.masthead h1 {
 }
 
 .fade-in {
-    animation: fadeInAnimation ease 3s;
+    animation: fadeInAnimation ease 7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -10232,4 +10232,21 @@ header.masthead h1 {
     100% {
         opacity: 1;
     }
+}
+
+.name-page {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
