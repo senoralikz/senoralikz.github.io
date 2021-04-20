@@ -10055,9 +10055,6 @@ hr.light {
 
 .page-section {
   padding: 8rem 0;
-  /* -webkit-animation:pop-in 0.5s;
-  -moz-animation:pop-in 0.5s;
-  -ms-animation:pop-in 0.5s; */
 }
 
 #mainNav {
@@ -10126,8 +10123,8 @@ header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/portfolio-pic.png"); */
-  /* background: #000; */
-  background: url("../assets/img/portfolio-pic.png");
+  background: #000;
+  /* background: url("../assets/img/portfolio-pic.png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10197,11 +10194,41 @@ header.masthead h1 {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* .portfolio-pic {
-    width: 60%;
-    height: 60%;
-} */
+.portfolio-pic {
+    /* width: 50%;
+    height: 50%; */
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
 
 #about-me-button {
     background-color: #023e8a;
+}
+
+/* css for slideIn plugin */
+.js-slidein {
+  opacity: 0;
+  transform: translateY(100px);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.js-slidein-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.name-page {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
