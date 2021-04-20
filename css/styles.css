@@ -10199,6 +10199,7 @@ header.masthead h1 {
     height: 50%; */
     border-radius: 50%;
     border: 5px solid #fff;
+    box-shadow: 5px 10px 8px #111;
 }
 
 #about-me-button {
@@ -10218,7 +10219,7 @@ header.masthead h1 {
   transform: translateY(0) !important;
 }
 
-.name-page {
+.fade-in {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
