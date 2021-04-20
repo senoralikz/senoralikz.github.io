@@ -10195,8 +10195,8 @@ header.masthead h1 {
 }
 
 .portfolio-pic {
-    /* width: 50%;
-    height: 50%; */
+    width: 60%;
+    height: 60%;
     border-radius: 50%;
     border: 5px solid #fff;
     box-shadow: 5px 10px 8px #111;
