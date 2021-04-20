@@ -38,7 +38,7 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-monospace: SFMono-Regul.social-iconsar, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 *,
@@ -120,16 +120,16 @@ address {
 }
 
 ol,
-ul,
+ul.social-icons,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 ol ol,
-ul ul,
-ol ul,
-ul ol {
+ul.social-icons ul.social-icons,
+ol ul.social-icons,
+ul.social-icons ol {
   margin-bottom: 0;
 }
 
@@ -194,7 +194,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: SFMono-Regul.social-iconsar, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -2106,7 +2106,7 @@ select.form-control:focus::-ms-value {
   border-radius: 0.3rem;
 }
 
-select.form-control[size], select.form-control[multiple] {
+select.form-control[size], select.form-control[mul.social-iconstiple] {
   height: auto;
 }
 
@@ -3647,7 +3647,7 @@ input[type=button].btn-block {
   color: #495057;
   background-color: #fff;
 }
-.custom-select[multiple], .custom-select[size]:not([size="1"]) {
+.custom-select[mul.social-iconstiple], .custom-select[size]:not([size="1"]) {
   height: auto;
   padding-right: 0.75rem;
   background-image: none;
@@ -3871,13 +3871,13 @@ input[type=button].btn-block {
   background-color: #adb5bd;
 }
 .custom-range:disabled::-webkit-slider-runnable-track {
-  cursor: default;
+  cursor: defaul.social-iconst;
 }
 .custom-range:disabled::-moz-range-thumb {
   background-color: #adb5bd;
 }
 .custom-range:disabled::-moz-range-track {
-  cursor: default;
+  cursor: defaul.social-iconst;
 }
 .custom-range:disabled::-ms-thumb {
   background-color: #adb5bd;
@@ -3914,7 +3914,7 @@ input[type=button].btn-block {
 .nav-link.disabled {
   color: #6c757d;
   pointer-events: none;
-  cursor: default;
+  cursor: defaul.social-iconst;
 }
 
 .nav-tabs {
@@ -9696,7 +9696,7 @@ button.bg-dark:focus {
 }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: SFMono-Regul.social-iconsar, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
 
 .text-justify {
@@ -10219,6 +10219,7 @@ header.masthead h1 {
   transform: translateY(0) !important;
 }
 
+/* css for fade in animation */
 .fade-in {
     animation: fadeInAnimation ease 7s;
     animation-iteration-count: 1;
@@ -10234,6 +10235,7 @@ header.masthead h1 {
     }
 }
 
+/* css for slide in from right animation */
 .name-page {
   animation-duration: 2s;
   animation-name: slidein;
@@ -10249,4 +10251,182 @@ header.masthead h1 {
     margin-left: 0%;
     width: 100%;
   }
+}
+
+/* css for floating social media icons */
+/* .sbuttons {
+  bottom: 5%;
+  position: fixed;
+  margin: 1em;
+  left: 0;
+}
+.sbutton {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin: 20px auto 0;
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+  position: relative;
+}
+.sbutton > i {
+  font-size: 38px;
+  line-height: 60px;
+  transition: all .2s ease-in-out;
+  transition-delay: 2s;
+}
+.sbutton:active,
+.sbutton:focus,
+.sbutton:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+.sbutton:not(:last-child) {
+  width: 60px;
+  height: 60px;
+  margin: 20px auto 0;
+  opacity: 0;
+}
+.sbutton:not(:last-child) > i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all .3s ease-in-out;
+}
+.sbuttons:hover .sbutton:not(:last-child) {
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+  margin: 15px auto 0;
+}
+.sbutton:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+  transition-delay: 25ms;
+}
+.sbutton:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
+}
+.sbutton:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+.sbutton:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 60ms;
+  transition-delay: 60ms;
+}
+.sbutton:not(:last-child):nth-last-child(5) {
+  -webkit-transition-delay: 80ms;
+  transition-delay: 80ms;
+}
+.sbutton:not(:last-child):nth-last-child(6) {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+
+[tooltip]:before {
+  font-family: 'Roboto';
+  font-weight: 600;
+  border-radius: 2px;
+  background-color: #585858;
+  color: #fff;
+  content: attr(tooltip);
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px 7px;
+  margin-left: 10px;
+  position: absolute;
+  left: 100%;
+  bottom: 20%;
+  white-space: nowrap;
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+.sbutton.mainsbutton {
+  background: #2ab1ce;
+}
+.sbutton.gplus {
+  background: #F44336;
+}
+.sbutton.pinteres {
+  background: #e60023;
+}
+.sbutton.twitt {
+  background: #03A9F4;
+}
+.sbutton.fb {
+  background: #3F51B5;
+}
+.sbutton.whatsapp {
+  background: #00e676;
+} */
+
+/* Floating Social Media Bar Style Starts Here */
+.fl-fl {
+  background: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 4px;
+  width: 190px;
+  position: absolute;
+  right: -136px;
+  z-index: 1000;
+  font: normal normal 10px Arial;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.fa {
+  font-size: 20px;
+  color: #000;
+  padding: 10px 0;
+  width: 40px;
+  margin-left: 8px;
+}
+
+.fl-fl:hover {
+  right: 0;
+}
+
+.fl-fl a {
+  color: #000 !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px!important;
+  vertical-align: top!important;
+}
+
+.float-fb {
+  top: 160px;
+}
+
+.float-tw {
+  top: 215px;
+}
+
+.float-gp {
+  top: 270px;
+}
+
+.float-rs {
+  top: 325px;
+}
+
+.float-ig {
+  top: 390px;
+}
+
+.float-pn {
+  top: 455px;
 }
