@@ -10340,3 +10340,7 @@ section p.detail-paragraph {
 b, strong {
     font-weight: 700;
 }
+
+div.projects-section {
+    margin-top: 20px;
+}
