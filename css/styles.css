@@ -10269,7 +10269,7 @@ ul.social-icons {
 }
 #sticky-social {
    right: 0;
-   position: fixed;
+   position: absolute;
    top: 150px;
 }
 #sticky-social a {
